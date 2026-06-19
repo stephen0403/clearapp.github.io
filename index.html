@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clear. — declutter your camera roll</title>
+    <meta name="description" content="clear. is the fastest way to clean up your photo library. Swipe right to keep, left to delete. No clutter. No regrets." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- NAV -->
+    <header class="site-header">
+        <nav class="site-nav">
+            <a class="logo" href="#home">clear<span class="logo-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+            <p class="hero-eyebrow">iOS App</p>
+            <h1 class="hero-title">clear<span class="hero-dot">.</span></h1>
+            <p class="hero-subtitle">The fastest way to clean up your camera roll.<br>Swipe to keep or delete. Review before anything is gone. Done.</p>
+            <a class="btn-appstore" href="#" aria-label="Download on the App Store">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"><path d="M8.809 0c-.56.064-1.23.427-1.633.895-.367.424-.674 1.07-.556 1.695.614.019 1.247-.363 1.634-.836.371-.454.648-1.102.555-1.754zM8.744 2.74C7.684 2.74 6.811 3.43 6.244 3.43c-.588 0-1.352-.651-2.238-.635C2.884 2.811 1.77 3.504 1.16 4.594c-1.25 2.16-.325 5.356.876 7.11.582.845 1.274 1.78 2.187 1.748.865-.034 1.2-.558 2.25-.558 1.053 0 1.353.558 2.27.54.949-.016 1.545-.845 2.126-1.693.672-.968.948-1.909.964-1.957-.018-.016-1.854-.716-1.872-2.842-.016-1.775 1.45-2.627 1.517-2.676-.832-1.226-2.121-1.36-2.57-1.392-.131-.011-.262-.016-.39-.016h.225z"/></svg>
+                Download on the App Store
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⟵⟶</span>
+                    <h3>Swipe to Decide</h3>
+                    <p>Swipe right to keep, left to delete. The fastest photo triage on iOS — a full library in minutes.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">◈</span>
+                    <h3>Similar Photos</h3>
+                    <p>Automatically groups burst shots and near-duplicate photos so you pick the one to keep and delete the rest in one tap.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">↩</span>
+                    <h3>Review Before Deleting</h3>
+                    <p>Nothing is permanently deleted until you confirm. Recover individual photos right up until the moment you commit.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⌘</span>
+                    <h3>Smart Filters</h3>
+                    <p>Focus on screenshots, old photos, duplicates, specific albums, or a custom date range — tackle your library one category at a time.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">▶</span>
+                    <h3>Video Support</h3>
+                    <p>Preview, scrub, and decide on videos inline — the same swipe flow, no context-switching.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">◎</span>
+                    <h3>Stats &amp; Streaks</h3>
+                    <p>Track how much storage you've freed, your deletion streak, and your cleanup history over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section class="text-section" id="privacy">
+        <div class="container container-narrow">
+            <p class="section-eyebrow">Legal</p>
+            <h2 class="section-title-left">Privacy Policy</h2>
+            <p class="text-meta">Effective: June 13, 2026</p>
+
+            <p>Thank you for using clear. We take your privacy seriously. This policy explains exactly what data we collect, how we use it, and — just as importantly — what we never do with it.</p>
+
+            <h3>Photo Library Access</h3>
+            <p>clear. requests access to your photo library solely to display photos for you to review. All photo analysis (identifying screenshots, burst shots, duplicates, and old photos) happens entirely on your device using Apple's PhotoKit framework. No photos, thumbnails, or metadata are ever uploaded to any server.</p>
+
+            <h3>Data We Collect</h3>
+            <p>clear. stores the following data <strong>locally on your device only</strong>, using Apple's standard UserDefaults and on-device file storage:</p>
+            <ul>
+                <li>Asset identifiers of photos you have marked for deletion (so pending deletions survive app restarts)</li>
+                <li>Asset identifiers of photos you have chosen to keep (for the 7-day resurface TTL)</li>
+                <li>Estimated file sizes per asset, cached to avoid recomputing them on every launch</li>
+                <li>Lifetime deletion count, freed storage, streak data, and weekly/category stats (aggregate numbers only — no photo content)</li>
+            </ul>
+            <p>None of this data ever leaves your device. We have no servers that receive or store any of it.</p>
+
+            <h3>Data We Do Not Collect</h3>
+            <ul>
+                <li>We do not collect your name, email, location, or any personally identifiable information</li>
+                <li>We do not upload photos, thumbnails, or any image data</li>
+                <li>We do not use advertising SDKs or third-party analytics</li>
+                <li>We do not track your behaviour across other apps or websites</li>
+            </ul>
+
+            <h3>Payments</h3>
+            <p>clear. offers an optional Pro subscription purchased exclusively through Apple's In-App Purchase system. We never see or store your payment details. All billing, receipt validation, and subscription management is handled end-to-end by Apple. For payment questions, refunds, or disputes, contact <a href="https://support.apple.com" target="_blank" rel="noopener">Apple Support</a>.</p>
+
+            <h3>Children's Privacy</h3>
+            <p>clear. is not directed at children under 13. We do not knowingly collect any information from children.</p>
+
+            <h3>Changes to This Policy</h3>
+            <p>If we ever change how we handle your data, we will update this page and revise the effective date above. Significant changes will also be noted in the App Store update release notes.</p>
+
+            <h3>Contact</h3>
+            <p>Questions about this policy? Reach us at <a href="mailto:stephenim83@gmail.com">stephenim83@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- TERMS OF SERVICE -->
+    <section class="text-section text-section-alt" id="terms">
+        <div class="container container-narrow">
+            <p class="section-eyebrow">Legal</p>
+            <h2 class="section-title-left">Terms of Service</h2>
+            <p class="text-meta">Effective: June 13, 2026</p>
+
+            <p>By downloading or using clear., you agree to these terms. If you do not agree, do not use the app.</p>
+
+            <h3>License</h3>
+            <p>We grant you a personal, non-exclusive, non-transferable, revocable licence to use clear. on Apple devices you own or control, subject to these terms and Apple's <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">App Store Terms of Service</a>.</p>
+
+            <h3>Your Content</h3>
+            <p>clear. only accesses your photo library to present photos for your review. You retain full ownership of all photos in your library. Deletion decisions are made solely by you; once you confirm permanent deletion via Apple's PhotoKit API, those photos are removed from your device in the same way as deleting from the native Photos app.</p>
+
+            <h3>Pro Subscription</h3>
+            <p>clear. Pro is an auto-renewing subscription available via Apple In-App Purchase. Subscription pricing, renewal terms, and cancellation are governed by Apple's standard subscription policies. You can manage or cancel your subscription at any time in your Apple ID Settings.</p>
+
+            <h3>Disclaimer of Warranties</h3>
+            <p>clear. is provided "as is" without warranties of any kind, express or implied. We do not warrant that the app will be error-free or uninterrupted. Use the app at your own discretion; always confirm before committing a permanent deletion.</p>
+
+            <h3>Limitation of Liability</h3>
+            <p>To the fullest extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of clear., including but not limited to accidental photo deletion.</p>
+
+            <h3>Governing Law</h3>
+            <p>These terms are governed by the laws of the jurisdiction in which you reside, without regard to conflict-of-law provisions. Any disputes are subject to Apple's dispute resolution process as described in the App Store Terms.</p>
+
+            <h3>Apple EULA</h3>
+            <p>Your use of clear. is also governed by Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">End User Licence Agreement (EULA)</a>. In the event of a conflict between these terms and Apple's EULA, Apple's EULA shall prevail.</p>
+
+            <h3>Changes</h3>
+            <p>We may update these terms from time to time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+
+            <h3>Contact</h3>
+            <p>Questions? Email us at <a href="mailto:stephenim83@gmail.com">stephenim83@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo">clear<span class="logo-dot">.</span></span>
+                <p>Declutter your camera roll.<br>Keep what matters.</p>
+            </div>
+            <div class="footer-links">
+                <h4>App</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">Apple EULA</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:stephenim83@gmail.com">stephenim83@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 clear. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        const canvas = document.getElementById('hero-canvas');
+        const ctx    = canvas.getContext('2d');
+
+        // Resize canvas pixels to match its CSS size.
+        // Called on load and on every window resize.
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width  = rect.width  * window.devicePixelRatio;
+            canvas.height = rect.height * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            W = rect.width;
+            H = rect.height;
+        }
+
+        let W = 0, H = 0;
+        window.addEventListener('resize', () => { ctx.resetTransform(); resize(); });
+        resize();
+
+        // Card shapes: portrait, landscape, square — mix of sizes
+        const SHAPES = [
+            { w: 62,  h: 82  },  // portrait
+            { w: 82,  h: 62  },  // landscape
+            { w: 66,  h: 66  },  // square
+            { w: 48,  h: 64  },  // small portrait
+            { w: 96,  h: 72  },  // wide landscape
+            { w: 56,  h: 74  },  // tall portrait
+        ];
+
+        const CARD_COUNT = 16;
+        const CORNER     = 10;   // rounded corner radius
+
+        function rand(a, b) { return a + Math.random() * (b - a); }
+
+        function makeCard(fromBottom) {
+            const s = SHAPES[Math.floor(Math.random() * SHAPES.length)];
+            const scale = rand(0.75, 1.35);
+            return {
+                x:         rand(0, W),
+                y:         fromBottom ? H + rand(20, 120) : rand(-80, H + 80),
+                w:         s.w * scale,
+                h:         s.h * scale,
+                speed:     rand(0.25, 0.65),       // upward drift speed (px/frame)
+                drift:     rand(-0.12, 0.12),       // horizontal wander (px/frame)
+                rotation:  rand(-0.28, 0.28),       // initial tilt (radians, ±~16°)
+                rotSpeed:  rand(-0.0008, 0.0008),   // slow spin
+                opacity:   rand(0.04, 0.10),        // ghost-like, barely there
+            };
+        }
+
+        const cards = Array.from({ length: CARD_COUNT }, () => makeCard(false));
+
+        // Draw a rounded rectangle path
+        function roundRect(x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.lineTo(x + w - r, y);
+            ctx.arcTo(x + w, y,      x + w, y + r,     r);
+            ctx.lineTo(x + w, y + h - r);
+            ctx.arcTo(x + w, y + h,  x + w - r, y + h, r);
+            ctx.lineTo(x + r, y + h);
+            ctx.arcTo(x,      y + h,  x, y + h - r,    r);
+            ctx.lineTo(x,     y + r);
+            ctx.arcTo(x,      y,      x + r, y,         r);
+            ctx.closePath();
+        }
+
+        let raf;
+        function frame() {
+            ctx.clearRect(0, 0, W, H);
+
+            for (const c of cards) {
+                ctx.save();
+                ctx.translate(c.x, c.y);
+                ctx.rotate(c.rotation);
+                ctx.globalAlpha = c.opacity;
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth   = 1;
+                roundRect(-c.w / 2, -c.h / 2, c.w, c.h, CORNER);
+                ctx.stroke();
+                ctx.restore();
+
+                // Advance position
+                c.y        -= c.speed;
+                c.x        += c.drift;
+                c.rotation += c.rotSpeed;
+
+                // Recycle card once it exits the top
+                if (c.y < -c.h - 20) {
+                    const fresh = makeCard(true);
+                    Object.assign(c, fresh);
+                }
+            }
+
+            raf = requestAnimationFrame(frame);
+        }
+
+        // Pause animation when tab is hidden to save battery
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) { cancelAnimationFrame(raf); }
+            else { raf = requestAnimationFrame(frame); }
+        });
+
+        frame();
+    }());
+    </script>
+</body>
+</html>
